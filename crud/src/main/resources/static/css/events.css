@@ -1,0 +1,208 @@
+        @font-face {
+            font-family: 'UFC';
+            src: url('/images/Sternbach Bold Italic.otf'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
+        body {
+            font-family: 'UFC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 20px;
+        }
+
+        h1, h2 {
+            color: #041527;
+            text-align: center;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #323b34;
+        }
+
+        button {
+            border: none;
+            padding: 10px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #btnSubmit {
+            background-color: #323b34;
+            color: white;
+            grid-column: span 2;
+            font-size: 16px;
+            padding: 12px;
+        }
+
+        #btnSubmit:hover {
+            background-color: #0f1310;
+        }
+
+        .btn-edit {
+            background-color: #ffc107;
+            color: #333;
+            margin: 2px;
+        }
+
+        .btn-delete {
+            background-color: #1f1649;
+            color: white;
+            margin: 2px;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+
+        .btn-cancel {
+            background-color: #6c757d;
+            color: white;
+            grid-column: span 2;
+            display: none;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        table {
+            width: 100%;
+            min-width: 1200px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        th {
+            background-color: #1b232c;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .status {
+            text-align: center;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+
+            #btnSubmit, .btn-cancel {
+                grid-column: span 1;
+            }
+        }
+        .full { grid-column: span 2; }
+
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .fight-row {
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr 1fr 1.5fr auto;
+            gap: 15px;
+            align-items: end;
+            margin-bottom: 10px;
+        }
+
+        #btnAddFight { background-color: #1b232c; color: white; }
+        .btn-back { background-color: #6c757d; color: white; grid-column: span 2; }
+
+        @media (max-width: 600px) {
+            .fight-row { grid-template-columns: 1fr; }
+            .full, .btn-back { grid-column: span 1; }
+        }
+        .btn-fights {
+            background-color: #1b232c;
+            color: white;
+            margin: 2px;
+        }
+
+        .btn-save {
+            background-color: #198754;
+            color: white;
+            margin: 2px;
+        }
+
+        .fights-details {
+            background-color: #f1f1f1;
+            padding: 15px;
+        }
+
+        .fights-details table {
+            min-width: 850px;
+        }
+
+        .fight-edit-row {
+            background-color: #fff;
+        }

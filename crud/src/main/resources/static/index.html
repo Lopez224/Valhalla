@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Valhalla</title>
+        <!-- Favicon-->
+        <link rel="icon" type="images/x-icon" href="images/valhalla.jpg" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">Valhalla</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fighters</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="fighters.html">All Fighters</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="events.html">New event</a></li>
+                                <li><a class="dropdown-item" href="crud.html">New Fighters</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="crud.html"><button class="btn btn-outline-dark" type="submit">New Fighter</button></a>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header>
+            <div class="video-contenedor py-5">
+                <video autoplay muted loop playsinline class="video-fondo">
+                    <source src="images/Valhalla.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Valhalla</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Fight and contrac management</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5 event-section">
+            <div class="event-fighters">
+                <div class="event">
+                    <div class="red-corner-fighter-img">
+                        <img id="red-img" class="fighter-img" alt="Esquina roja">
+                        <h3 id="red-name" class="fighter-name"></h3>
+                    </div>
+
+                    <div class="event-name">
+                        <h2 id="event-name" data-event="name">Cargando evento...</h2>
+                        <p id="event-place" data-event="place"></p>
+                    </div>
+
+                    <div class="blue-corner-fighter-img">
+                        <img id="blue-img" class="fighter-img" alt="Esquina azul">
+                        <h3 id="blue-name"></h3>
+                    </div>
+                </div>
+
+                <div class="date">
+                    <p>Próximo evento en: <span id="event-date" data-event="date">--</span></p>
+                </div>
+
+                <div class="countdown-clock" id="countdown">
+                    <div class="group">
+                        <div class="big" id="days">00</div>
+                        <div class="small">días</div>
+                    </div>
+                    <div class="group">
+                        <div class="big" id="hours">00</div>
+                        <div class="small">horas</div>
+                    </div>
+                    <div class="group">
+                        <div class="big" id="minutes">00</div>
+                        <div class="small">minutos</div>
+                    </div>
+                    <div class="group">
+                        <div class="big" id="seconds">00</div>
+                        <div class="small">segundos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 tickets-section">
+            <img class="ticket-img" src="images/muhammad.png" alt="">
+            <div class="ticket">
+                <div class="titulo">¡COMPRA TUS ENTRADAS AHORA!</div>
+                <div class="event-name">
+                    <h2 id="event-name" data-event="name">Cargando evento...</h2>
+                    <p id="event-place" data-event="palce">📍 </p>
+                </div>
+                <div  class="date" data-event="date">
+                    <p>Fecha: <span id="event-date">📅 --</span></p>
+                </div>
+                <p>Entradas desde</p>
+                <div class="price">10$</div>
+                <button id="btn-toggle" class="buy-ticket" type="button">COMPRAR</button>
+                <div class="credit-card-form" id="card-div">
+                    <form id="card" style="display: none; margin-top: 10px;">
+                        <label for="cardInput">Numero de Tarjeta</label>
+                        <input type="text" id="cardInput" maxlength="16" placeholder="Ingrese su numero de tarjeta">
+
+                        <label for="cardHolderInput">Nombre del Titular</label>
+                        <input type="text" id="cardHolderInput" placeholder="Nombre como aparece en la tarjeta">
+
+                        <label for="expiryInput">Fecha de vencimiento</label>
+                        <input type="text" id="expiryInput" maxlength="5" placeholder="MM/AA">
+                        <button type="submit">CONFIRMAR</button>
+                    </form>
+                </div>
+                <p>¡¡Ultimas entradas!!</p>
+                
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; VALHALLA 2026</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

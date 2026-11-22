@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valhalla - Fighter CRUD</title>
+    <link rel="icon" type="images/x-icon" href="images/valhalla.jpg" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/crud.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+<!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">Valhalla</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fighters</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">All Fighters</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Champions</a></li>
+                            <li><a class="dropdown-item" href="#!">New Fighters</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="crud.html"><button class="btn btn-outline-dark" type="submit">New Fighter</button></a>
+            </div>
+        </div>
+    </nav>
+<div class="container">
+
+    <img src="images/valhalla.jpg"
+         alt="Valhalla"
+         class="logo"
+         width="600">
+
+    <h1>Datos del peleador</h1>
+
+    <!-- Formulario de registro y edición -->
+
+    <form id="fighterForm">
+
+        <input type="hidden" id="fighterId">
+
+        <div class="form-group">
+            <label for="nombreCompleto">Nombre completo:</label>
+            <input type="text" id="nombreCompleto" required>
+        </div>
+
+        <div class="form-group">
+            <label for="apodo">Apodo:</label>
+            <input type="text" id="apodo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nacionalidad">Nacionalidad:</label>
+            <input type="text" id="nacionalidad" required>
+        </div>
+
+        <div class="form-group">
+            <label for="estiloDeCombate">Estilo de combate:</label>
+            <input type="text" id="estiloDeCombate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="base">Base:</label>
+            <input type="text" id="base" required>
+        </div>
+
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" min="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" step="0.01" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="alcance">Alcance:</label>
+            <input type="number" id="alcance" step="0.01" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ppv">PPV:</label>
+            <input type="number" id="ppv" step="0.01" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="showPayment">Show Payment:</label>
+            <input type="number" id="showPayment" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="promotora">Promotora:</label>
+            <input type="text" id="promotora" required>
+        </div>
+
+        <div class="form-group">
+            <label for="record">Record:</label>
+            <input type="text" id="record" placeholder="Ej. 17-1-0" required>
+        </div>
+        <div class="form-group">
+            <label for="foto">Fotografia</label>
+            <input type="file" id="foto" accept="image/png">
+        </div>
+
+        <button type="submit" id="btnSubmit">
+            Registrar peleador
+        </button>
+        <button type="button" id="btnSubmit"
+            onclick="history.back()">
+            Volver atrás
+        </button>
+        <button type="button"
+                id="btnCancel"
+                class="btn-cancel"
+                onclick="limpiarFormulario()">
+            Cancelar edición
+        </button>
+
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <!-- Tabla de peleadores -->
+
+    <h2>Registro de peleadores</h2>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre completo</th>
+                    <th>Apodo</th>
+                    <th>Nacionalidad</th>
+                    <th>Estilo</th>
+                    <th>Base</th>
+                    <th>Edad</th>
+                    <th>Altura</th>
+                    <th>Alcance</th>
+                    <th>PPV</th>
+                    <th>Show Payment</th>
+                    <th>Promotora</th>
+                    <th>Record</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody id="fighterTableBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+<footer class="text-center py-4">
+    <p>VALHALLA © 2026 - ALL RIGHTS RESERVED</p>
+</footer>
+
+<script src="js/crud.js"></script>
+</body>
+</html>

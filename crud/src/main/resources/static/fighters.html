@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>All Fighters</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/fighters.css">
+        <style>
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">Valhalla</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fighters</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">All Events</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="events.html">Nuevo Evento</a></li>
+                                <li><a class="dropdown-item" href="#!">New Fighters</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="crud.html"><button class="btn btn-outline-dark" type="submit">New Fighter</button></a>
+                </div>
+            </div>
+        </nav>
+ <header class="fighters-header">
+
+        <div class="container">
+
+            <h1>HALL OF FIGHTERS</h1>
+
+            <p>Conoce a los guerreros que forman parte de Valhalla</p>
+
+        </div>
+
+    </header>
+
+
+    <!-- BUSCADOR -->
+    <main class="container my-5">
+
+        <div class="fighters-toolbar">
+
+            <div class="total-fighters">
+                <span id="totalFighters">0</span> PELEADORES
+            </div>
+
+            <div class="search">
+                <input
+                    type="text"
+                    id="searchFighter"
+                    placeholder="Buscar por nombre, apodo o record..."
+                >
+            </div>
+        </div>
+        <!-- GALERÍA -->
+        <section class="view-fighters">
+
+            <ul class="fighters-list" id="fightersList">
+                <!-- JavaScript generará las tarjetas aquí -->
+            </ul>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                No se encontraron peleadores.
+            </p>
+
+            <p id="loadingMessage" class="empty-message">
+                Cargando peleadores...
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="text-center py-4">
+        <p>VALHALLA © 2026 - ALL RIGHTS RESERVED</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="js/fighters.js">
+    </script>
+    </body>
+</html>
