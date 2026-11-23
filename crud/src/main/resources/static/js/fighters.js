@@ -62,8 +62,8 @@ const API_URL = '/api/fighters';
             const search = searchInput.value.toLowerCase().trim();
             const filteredFighters = fighters.filter(fighter => {
                 return (
-                    (fighter.nombreCompleto || '').toLowerCase().includes(search) ||
-                    (fighter.apodo || '').toLowerCase().includes(search) ||
+                    (fighter.fullName || '').toLowerCase().includes(search) ||
+                    (fighter.nickname || '').toLowerCase().includes(search) ||
                     (fighter.record || '').toLowerCase().includes(search)
                 );
             });

@@ -70,17 +70,17 @@ const API_URL = '/api/fighters';
             e.preventDefault();
             const id = document.getElementById('fighterId').value;
             const fighter = {
-                nombreCompleto: document.getElementById('nombreCompleto').value,
-                apodo: document.getElementById('apodo').value,
-                nacionalidad: document.getElementById('nacionalidad').value,
-                estiloDeCombate: document.getElementById('estiloDeCombate').value,
+                fullName: document.getElementById('nombreCompleto').value,
+                nickname: document.getElementById('apodo').value,
+                nationality: document.getElementById('nacionalidad').value,
+                combatStyle: document.getElementById('estiloDeCombate').value,
                 base: document.getElementById('base').value,
-                edad: Number(document.getElementById('edad').value),
-                altura: Number(document.getElementById('altura').value),
-                alcance: Number(document.getElementById('alcance').value),
+                age: Number(document.getElementById('edad').value),
+                height: Number(document.getElementById('altura').value),
+                reach: Number(document.getElementById('alcance').value),
                 ppv: Number(document.getElementById('ppv').value),
                 showPayment: Number(document.getElementById('showPayment').value),
-                promotora: document.getElementById('promotora').value,
+                promoter: document.getElementById('promotora').value,
                 record: document.getElementById('record').value
             };
             try {
